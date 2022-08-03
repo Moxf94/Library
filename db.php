@@ -1,5 +1,5 @@
 <?php
-public function connectToDatabase()
+function connectToDatabase()
 {
 $link = mysqli_connect("localhost","root","root", "test_db");
 
