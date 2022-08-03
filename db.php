@@ -1,16 +1,17 @@
 <?php
-function connectToDatabase()
+function connectToDatabase():mysqli
 {
-$link = mysqli_connect("localhost","root","root", "test_db");
+    $link = mysqli_connect("localhost","root","root", "test_db");
 
-if ($link == false)
-{
-    print("Ошибка: Невозможно подключиться к MySQL " . mysqli_connect_error());
+    if ($link == false)
+    {
+        print("Ошибка: Невозможно подключиться к MySQL " . mysqli_connect_error());
+    }
+    return $link;
 }
-}
+$link = connectToDatabase();
 
 $sql = 'SELECT * FROM users';
-
 
 if($result = $link->query($sql))
 {
@@ -23,6 +24,5 @@ if($result = $link->query($sql))
         echo "</tr>";
     }
 
-     
+
 }
-?>

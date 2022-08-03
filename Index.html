@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <script src="vendor/js/jquery-3.3.1.slim.min.js" defer></script>
-    <script src="vendor/js/popper.min.js" async></script>
-    <link rel="stylesheet" href="vendor/css/bootstrap.min.css">
-    <script src="vendor/js/bootstrap.min.js" defer></script>
+    <script src="BOOTSTRAP/Vendor/js/jquery-3.3.1.slim.min.js" defer></script>
+    <script src="BOOTSTRAP/Vendor/js/popper.min.js" async></script>
+    <link rel="stylesheet" href="BOOTSTRAP/Vendor/css/bootstrap.min.css">
+    <script src="BOOTSTRAP/Vendor/js/bootstrap.min.js" defer></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
 </head>
 <body>
-    
-   
-   
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Библиотека</a> 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Библиотека</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -34,79 +34,79 @@
                         <ul class="navbar-nav mr-auto">
                             <a class="nav-link" href="#">Помощь <span class="sr-only">(current)</span></a>
                             </li>
-    </nav>
-            
+</nav>
 
-    <div class="jumbotron px-5">
+
+<div class="jumbotron px-5">
     <div class="row">
         <div class="col-lg-7 col-sm-9 col-xs-11">
-       <h1 class="display-3">Тестовая библиотека</h1>
-    <p class="lead px-1">Это место, где собраны книги. Здесь вы можете добавлять 
-    книги, получать информацию о жанрах, добавлять свои книги.</p>   
-        <button onclick="document.location = 'AddBook/Add.html'" type="button" class="btn btn-primary btn-lg">
-            Добавить книгу</button>
-    
+            <h1 class="display-3">Тестовая библиотека</h1>
+            <p class="lead px-1">Это место, где собраны книги. Здесь вы можете добавлять
+                книги, получать информацию о жанрах, добавлять свои книги.</p>
+            <button onclick="document.location = 'AddBook/Add.html'" type="button" class="btn btn-primary btn-lg">
+                Добавить книгу</button>
 
-    </div>
-    </div>
-    </div>
 
-                <div class="row px-5 mr-0">
-                    <div class="col-lg-5 col-sm-7 pb-5">
+        </div>
+    </div>
+</div>
 
-                        <div class="card card-profile">
-                        <div class="card-header"> Ваш профиль </div>
-                        <div class="card-body">
-               <h5 class="card-title"> Иванов Иван Иванович </h5>
-               <p class="card-text">
-                <b>Уровень</b>: Новчиок
-                <br>
-                <b>Любимые жанры</b>: Романы
-               </p>     
-                  
-               <button type="button" class="btn btn-primary">Редактировать</button>
+<div class="row px-5 mr-0">
+    <div class="col-lg-5 col-sm-7 pb-5">
+
+        <div class="card card-profile">
+            <div class="card-header"> Ваш профиль </div>
+            <div class="card-body">
+                <h5 class="card-title"> Иванов Иван Иванович </h5>
+                <p class="card-text">
+                    <b>Уровень</b>: Новчиок
+                    <br>
+                    <b>Любимые жанры</b>: Романы
+                </p>
+
+                <button type="button" class="btn btn-primary">Редактировать</button>
             </div>
         </div>
-        </div>
-        
-                
+    </div>
 
-                <div class="col-lg-4 col-sm-5 pb-3">
-                    <div class="card card-stats">
-                        <div class="card-header"> Статистика </div>
-                            <div class="card-body"> 
-                                <p class="card-text"> 
-                                    <b>На платформе</b>: 2 года
-                                    <br>
-                                    <b>Добавлено книг</b>: 5
-                                    <br>
-                                    <b>Языки</b>: русский, английский
-                                    
-                                </p>
-</div>
-</div>
-</div>
-        <div class="table px-3 pb-5">
-            <table class="table table-bordered table-responsive-sm table-hover">
+
+
+    <div class="col-lg-4 col-sm-5 pb-3">
+        <div class="card card-stats">
+            <div class="card-header"> Статистика </div>
+            <div class="card-body">
+                <p class="card-text">
+                    <b>На платформе</b>: 2 года
+                    <br>
+                    <b>Добавлено книг</b>: 5
+                    <br>
+                    <b>Языки</b>: русский, английский
+
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="table px-3 pb-5">
+        <table class="table table-bordered table-responsive-sm table-hover">
             <thead>
-                <tr>
-                    <th scope="col">Id</th>
-                    <th scope="col">Автор</th>
-                    <th scope="col">Название произведения</th>
-                    <th scope="col">Жанр</th>
-                </tr>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Автор</th>
+                <th scope="col">Название произведения</th>
+                <th scope="col">Жанр</th>
+            </tr>
             </thead>
-                <tbody class="text-primary">
-                    <tr>
-                        <?php include 'db.php' ?>
-                    </tr>
-                </tbody>
+            <tbody class="text-primary">
+            <tr>
+                <?php include 'db.php' ?>
+            </tr>
+            </tbody>
 
         </table>
-    </div>                 
-            
-<div class="footer mt-auto py-3 px-4 text-muted"> © Научный личный кабинет. Все права защищены</div>
-            
+    </div>
+
+    <div class="footer mt-auto py-3 px-4 text-muted"> © Научный личный кабинет. Все права защищены</div>
+
 </body>
 </html>
 

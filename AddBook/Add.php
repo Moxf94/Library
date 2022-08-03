@@ -1,37 +1,29 @@
 <?php
-$link = mysqli_connect("localhost","root","root", "test_db");
 
-if ($link == false)
+include ('../db.php');
+$link = connectToDatabase();
+
+$author = $link->real_escape_string($_POST["author"]);
+$book = $link->real_escape_string($_POST["book"]);
+$genre = $link->real_escape_string($_POST["genre"]);
+$sqlAdd = "INSERT INTO users (author, book, genre) VALUES ('$author', '$book', '$genre')";
+
+if($author || $book || $genre == null)
 {
-    print("Ошибка: Невозможно подключиться к MySQL " . mysqli_connect_error());
-
+    echo "Заполните все поля!";
+    header("refresh:3;url = http://library/AddBook/Add.html");
+    die;
 }
 
-    $author = $link->real_escape_string($_POST["author"]);
-    $book = $link->real_escape_string($_POST["book"]);
-    $genre = $link->real_escape_string($_POST["genre"]);
-    $sqlAdd = "INSERT INTO users (author, book, genre) VALUES ('$author', '$book', '$genre')";
+if($link->query($sqlAdd)){
+    echo "Данные успешно добавлены";
+    header("refresh:3;url = http://library/");
+}
 
-    if(null === $author || 
-       null === $book || 
-       null === $genre )
-    {
-        echo "Заполните все поля!";
-        header("refresh:3;url = http://library/AddBook/Add.html");
-        die;
-    }
+else
+{
+    echo "Ошибка: " . $link->error;
+}
 
-    if($link->query($sqlAdd)){
-        echo "Данные успешно добавлены";
-        header("refresh:3;url = http://library/");
+$link->close();
 
-    } 
-
-    else
-    {
-        echo "Ошибка: " . $link->error;
-    }
-
-    $link->close();
-
-    ?>
